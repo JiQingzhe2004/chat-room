@@ -1,0 +1,678 @@
+html {
+    background-color: bisque;
+}
+
+/*滚动条样式美化*/
+/*定义滚动条轨道*/
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+    background-color: #edecec;
+}
+/*定义滚动条滑块*/
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #666;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+/*所有图片禁止拖动*/
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+}
+
+/* 使父容器成为 Flex 容器 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    height: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: bisque;
+    border-radius: 10px;
+    position: relative;
+}
+
+.footer {
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+font-size: 12px; /* 或者选择其他较小的字体大小 */
+font-weight: lighter; /* 或者使用具体数值如 300 */
+color: #908c8c; /* 灰色的一种表示方法 */
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    height: 60px;
+}
+
+.header img {
+    width: 70px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #333;
+}
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.introduction p {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* 通用按钮样式 */
+.btn-group {
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 20px 10%;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 登录按钮特定样式 */
+
+.login {
+    background-color: #218838;
+}
+
+/* 注册按钮特定样式 */
+
+.register:hover {
+    background-color: #c82333;
+}
+
+/*底部栏*/
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+}
+
+@media (max-width: 608px) {
+    .container {
+        width: 100%;
+        height: 95%;
+        padding: 10px;
+        flex: 1;
+    }
+
+    .btn {
+        padding: 20px 40%;
+    }
+
+    .header img {
+        width: 60px;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}
+
+
+
+/* 登录页面样式  */
+/* 表单容器样式 */
+form {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+form input{
+    outline: none;
+}
+
+@media screen and (max-width: 608px) {
+    form {
+        width: auto;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* 标签样式 */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    /* 输入框样式 */
+    input[type="text"],
+    input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* 提交按钮样式 */
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+}
+
+/* 表单组样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 标签样式 */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 提交按钮样式 */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* 注册按钮样式 */
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #218838;
+}
+
+/* 头像上传和预览样式 */
+#avatar {
+    display: none; /* 隐藏文件输入框 */
+}
+
+/* 头像上传和预览样式 */
+#avatar {
+    display: none; /* 隐藏文件输入框 */
+}
+
+.avatar-preview {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+    border: 1px solid #5eff00;
+}
+
+/* 使头像预览图像可点击以触发文件选择 */
+.avatar-preview:hover {
+    opacity: 0.8;
+}
+
+/* 使头像预览图像可点击以触发文件选择 */
+.avatar-preview:hover {
+    opacity: 0.8;
+}
+
+/* 聊天界面样式 */
+.chat-container {
+    background-color: #fff;
+    width: 100%;
+    height: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    flex-direction: column-reverse; /* 反转消息顺序 */
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    /*图片比例不变*/
+    object-fit: cover;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    height: 40px;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 50px 0 0 50px; /* 左侧圆角 */
+    height: 40px;
+    margin-left: 0; 
+    outline: none;
+}
+
+.chat-input button {
+    width: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 0 50px 50px 0; /* 右侧圆角 */
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+
+#image-input {
+    display: none; /* 隐藏文件输入框 */
+}
+
+@media screen and(max-width: 608px) {
+    .chat-container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .user-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chat-input {
+        padding: 5px;
+        height: 30px;
+    }
+
+    .chat-input input[type="text"] {
+        height: 30px;
+    }
+
+    .chat-input button {
+        height: 30px;
+    }
+    
+}
+
+/* 头像上传和预览样式 */
+.image-preview {
+    /*外边距*/
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    object-fit: cover;
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+    border: 2px dashed #ccc;
+    padding: 5px;
+}
+
+@media screen and (max-width: 608px) {
+
+    .chat-box {
+        height: auto;
+    }
+
+    .user-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chat-input {
+        padding: 5px;
+        height: 30px;
+    }
+
+    .chat-input input[type="text"] {
+        height: 30px;
+    }
+
+    .chat-input button {
+        height: 30px;
+    }
+
+    .image-preview {
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+
+/* 聊天消息样式 */
+.chat-message-you, .chat-message-me {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat-message-you {
+    justify-content: flex-start;
+}
+
+.chat-message-me {
+    justify-content: flex-end;
+}
+
+
+.chat-bubbles-you, .chat-bubbles-me {
+    max-width: 60%;
+    min-width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chat-bubbles-me, .chat-bubbles-you img {
+    max-width: 300px;
+}
+
+@media screen and (max-width: 608px) {
+    .chat-bubbles-you, .chat-bubbles-me {
+        max-width: 100%;
+        min-width: 70%;
+    }
+    
+}
+
+.chat-bubbles-you {
+    background-color: #f1f0f0;
+    margin-left: 10px;
+}
+
+.chat-bubbles-me {
+    background-color: #0084ff96;
+    color: white;
+    margin-right: 10px;
+}
+
+.chat-bubbles-me .user-avatar-chat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+    /*图片比例不变*/
+    object-fit: cover;
+    float: right;
+}
+
+.chat-bubbles-you .user-avatar-chat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+    /*图片比例不变*/
+    object-fit: cover;
+    float: left;
+}
+
+.chat-message-time, .chat-sender-name {
+    font-size: 12px;
+    color: #888;
+}
+
+.chat-sender-name {
+    font-weight: bold;
+}
+
+.chat-message-image {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.chat-message-image img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.chat-message-you .chat-message-time, .chat-message-you .chat-sender-name {
+    text-align: left;
+}
+
+.chat-message-me .chat-message-time, .chat-message-me .chat-sender-name {
+    text-align: right;
+}
+
+ /* 模态框的样式 */
+ .modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* 模态框内容的样式 */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+/* 关闭按钮的样式 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fixed-top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* 确保按钮在最上层 */
+    padding: 10px 20px;
+    background-color: #f44336; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fixed-top-right:hover {
+    background-color: #d32f2f; /* 按钮悬停时的背景颜色 */
+}
+
+/* 灯箱背景 */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox.show {
+    display: flex;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+/* 灯箱图片 */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* 关闭按钮 */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
